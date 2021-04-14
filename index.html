@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email JS</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+        <script type="text/javascript">
+            function sendEmail() {
+                //event.preventDefault();
+                Email.send({
+                    SecureToken : "d28060d4-bc5a-4884-8086-f96536942fe3",
+                    To : 'soul_of_saber@yahoo.fr',
+                    From : "saber.saber722@gmail.com",
+                    Subject : "Test",
+                    Body : "the body of the text Corps du formulaire",
+                })
+                .then(function(message){
+                    alert("Email envoyé")
+                });
+            }
+        </script>
+</head>
+<body>
+ 
+    <form method="POST">
+        <input type="button" value="Send Email" onclick="sendEmail()"/>
+    </form>  
+</body>
+</html>
